@@ -9,7 +9,7 @@ DB_CONFIG = {
 }
 
 def get_airport(connection, icao):
-	query = f"SELECT name, iso_region FROM flight_game.airport WHERE ident=\"{icao}\""
+	query = f"SELECT name, iso_country FROM flight_game.airport WHERE ident=\"{icao}\""
 	cursor = connection.cursor()
 
 	cursor.execute(query)
