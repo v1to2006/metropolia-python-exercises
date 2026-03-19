@@ -12,8 +12,8 @@ class Car:
 		print(f"Traveled distance: {self.__traveled_distance} km")
 
 def main():
-	player = Car("ABC-123", 142)
+	car = Car("ABC-123", 142)
 
-	player.print_info()
+	car.print_info()
 
 main()
