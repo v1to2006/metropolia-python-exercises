@@ -10,7 +10,7 @@ class Car:
 	def __init__(self, register_number, max_speed):
 		self.__register_number = register_number
 		self.__max_speed = max_speed
-		self.__current_speed = 60
+		self.__current_speed = max_speed
 		self.__traveled_distance = 0
 	
 	def accelerate(self, speed):
@@ -31,7 +31,7 @@ class Car:
 		print(f"Traveled distance: {self.__traveled_distance} km")
 
 def main():
-	car = Car("ZOV-432", 200)
+	car = Car("ZOV-432", 60)
 
 	while (True):
 		car.print_info()
