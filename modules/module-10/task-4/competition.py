@@ -9,9 +9,17 @@ class Competition:
 		self._cycle_time = 1
 	
 	def run(self):
+		current_cycle = 0
+
 		while not self._has_winner():
 			self._drive_cycle()
-			self._print_state()
+
+			if (current_cycle % 10 == 0):
+				self._print_state()
+
+			current_cycle += 1
+		
+		self._print_state()
 		
 	def _drive_cycle(self):
 		min_accelerate_speed = -10
