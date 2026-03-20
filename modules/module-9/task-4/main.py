@@ -1,7 +1,8 @@
 from car import Car
 from competition import Competition
 
-players = [
+def main():
+	players = [
 			Car("ABC-0"),
 			Car("ABC-1"),
 			Car("ABC-2"),
@@ -13,8 +14,7 @@ players = [
 			Car("ABC-8"),
 			Car("ABC-9"),
 			]
-
-def main():
+	
 	competition = Competition(players)
 	competition.run()
 
