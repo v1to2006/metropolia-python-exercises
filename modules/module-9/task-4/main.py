@@ -1,7 +1,5 @@
 from car import Car
 from competition import Competition
-from utils import Utils
-import random
 
 players = [
 			Car("ABC-0"),

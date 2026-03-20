@@ -3,21 +3,21 @@ import random
 
 class Car:
 	def __init__(self, register_number):
-		self.__register_number = register_number
-		self.__max_speed = self.generate_max_speed()
-		self.__current_speed = 60
-		self.__traveled_distance = 0
+		self._register_number = register_number
+		self._max_speed = self.generate_max_speed()
+		self._current_speed = 60
+		self._traveled_distance = 0
 	
 	def accelerate(self, speed):
-		self.__current_speed += speed
+		self._current_speed += speed
 
-		self.__current_speed = Utils.clamp(self.__current_speed, 0, self.__max_speed)
+		self._current_speed = Utils.clamp(self._current_speed, 0, self._max_speed)
 	
 	def travel(self, timeInHours):
 		if timeInHours < 0:
 			return
 
-		self.__traveled_distance += self.__current_speed * timeInHours
+		self._traveled_distance += self._current_speed * timeInHours
 	
 	def generate_max_speed(self) -> int:
 		minSpeed = 100
