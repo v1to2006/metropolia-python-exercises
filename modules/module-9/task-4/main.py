@@ -2,20 +2,17 @@ from car import Car
 from competition import Competition
 
 def main():
-	players = [
-			Car("ABC-0"),
-			Car("ABC-1"),
-			Car("ABC-2"),
-			Car("ABC-3"),
-			Car("ABC-4"),
-			Car("ABC-5"),
-			Car("ABC-6"),
-			Car("ABC-7"),
-			Car("ABC-8"),
-			Car("ABC-9"),
-			]
+	cars = create_cars()
 	
-	competition = Competition(players)
+	competition = Competition(cars)
 	competition.run()
+
+def create_cars() -> list[Car]:
+	cars = []
+
+	for i in range(10):
+		cars.append(Car(f"ABC-{i + 1}"))
+	
+	return cars
 
 main()

@@ -29,5 +29,7 @@ class Competition:
 	def print_winners(self):
 		sorted_players = sorted(self._players, key=lambda player: player.traveled_distance, reverse=True)
 
-		for i in range(len(sorted_players)):
-			print(f"{i + 1}. {sorted_players[i]}")
+		print("Position | Register | Max speed | Current speed | Distance")
+
+		for i, player in enumerate(sorted_players, start=1):
+			print(f"{i} | {player}")
